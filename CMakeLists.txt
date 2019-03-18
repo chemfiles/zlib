@@ -3,6 +3,11 @@ set(CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS ON)
 
 project(zlib C)
 
+if (POLICY CMP0063)
+    # Use of `<LANG>_VISIBILITY_PRESET` in OBJECT libraries
+    cmake_policy(SET CMP0063 NEW)
+endif()
+
 set(VERSION "1.2.11")
 
 # option(ASM686 "Enable building i686 assembly implementation")

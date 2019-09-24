@@ -77,7 +77,7 @@ if(NOT HAVE_FSEEKO)
 endif()
 
 # Require support for large (64-bit) files
-target_compile_options(zlib PUBLIC -DZ_LARGE64=1)
+target_compile_options(zlib PUBLIC -D_LARGEFILE64_SOURCE=1)
 
 if(MSVC)
     target_compile_options(zlib PUBLIC -D_CRT_SECURE_NO_DEPRECATE)

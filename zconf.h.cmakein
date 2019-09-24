@@ -506,6 +506,11 @@ typedef uLong FAR uLongf;
 #  define z_off_t long
 #endif
 
+// Apple does not define off64_t, but off_t is 64-bit
+#ifdef __APPLE__
+#  define off64_t off_t
+#endif
+
 #if !defined(_WIN32) && defined(Z_LARGE64)
 #  define z_off64_t off64_t
 #else

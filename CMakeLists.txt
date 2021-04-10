@@ -6,7 +6,7 @@ if (POLICY CMP0063)
     cmake_policy(SET CMP0063 NEW)
 endif()
 
-set(VERSION "1.2.11-chemfiles")
+set(VERSION "1.2.11.1-chemfiles")
 
 # include(CheckTypeSize)
 include(CheckFunctionExists)

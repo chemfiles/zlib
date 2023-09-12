@@ -1,0 +1,16 @@
+diff --git a/zconf.h.cmakein b/zconf.h.cmakein
+index a7f24cce6..b8f2d4ad5 100644
+--- a/zconf.h.cmakein
++++ b/zconf.h.cmakein
+@@ -519,6 +519,11 @@ typedef uLong FAR uLongf;
+ #  define z_off_t long
+ #endif
+
++// Apple does not define off64_t, but off_t is 64-bit
++#ifdef __APPLE__
++#  define off64_t off_t
++#endif
++
+ #if !defined(_WIN32) && defined(Z_LARGE64)
+ #  define z_off64_t off64_t
+ #else

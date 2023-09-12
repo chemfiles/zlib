@@ -1,0 +1,5 @@
+build/
+zlib/
+zlib.tar.gz
+
+!*.patch
